@@ -42,6 +42,14 @@ SET first_name = 'Neo',
 WHERE id = 1;
 --first row updated
 
+CREATE TABLE book(
+	id SERIAL PRIMARY KEY,
+	title VARCHAR(100) NOT NULL,
+	page_number INTEGER NOT NULL,
+	author_id INTEGER REFERENCES author(id)
+);
+--first foreign key added to book table
+
 
 
 
